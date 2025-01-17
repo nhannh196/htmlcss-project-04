@@ -31,6 +31,15 @@ a {
     padding: 0;
 }
 
+.heading-2 {
+    color: #000958;
+    font-family: Sora;
+    font-size: 5.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.19231; /* 119.231% */
+}
+
 .desc {
     color: #656689;
     font-size: 1.6rem;
@@ -63,7 +72,8 @@ a {
 
 /* Header */
 .header {
-    padding-top: 26px;
+    padding: 26px 0;
+
     /* background-color: orange; */
 }
 /* -------------------------- Navigation -------------------------- */
@@ -85,12 +95,13 @@ a {
     font-style: normal;
     font-weight: 500;
     line-height: 1; /* 100% */
+    transition: 0.6s;
 }
 
 .navigation__menu-item--active,
 .navigation__menu-item:hover {
     color: #000958;
-    text-shadow: 0 1px 0 #000958;
+    text-shadow: 0.5px 0 0 #000958;
 }
 
 .navigation__action {
@@ -108,6 +119,7 @@ a {
     color: #000958;
     font-size: 1.4rem;
     font-weight: 600;
+    transition: 0.5s;
 }
 
 .navigation__action-btn:hover {
@@ -347,4 +359,165 @@ a {
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+}
+
+/* -------------------------- About -------------------------- */
+.about {
+    margin-top: 51px;
+}
+
+.about-layout {
+    padding: 53px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__content {
+    width: 40.77%;
+    flex-shrink: 0;
+}
+
+.about__content-intro {
+    color: #5e6085;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.about__content-heading {
+    margin-top: 15px;
+}
+
+.about__content-desc {
+    margin-top: 24px;
+}
+
+.about__content-info {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 34px;
+}
+
+.about__content-info-item {
+    display: inline-flex;
+    position: relative;
+    column-gap: 10px;
+    align-items: center;
+    color: #48496a;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1; /* 100% */
+}
+
+.about__content-info-item::before {
+    content: "";
+    display: inline-block;
+    flex-shrink: 0;
+    /* position: relative; */
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+}
+
+.about__content-info-item::after {
+    content: "";
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    display: inline-block;
+    top: 25%;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/check-icon.svg) no-repeat;
+}
+
+.about__media {
+    position: relative;
+    width: 54.44%;
+    height: 559px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.about__media-bg-img {
+    position: relative;
+    width: 77.55%;
+    height: 336px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+}
+
+.about__media-bg-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #000958;
+    background: url(../img/about-union-2.svg) no-repeat;
+    right: calc(-100% + 67px);
+    top: -66px;
+}
+
+.about__media-img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.about__media-intro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 14px;
+    padding: 31px 26px;
+    width: 136px;
+    height: 156px;
+    left: 44px;
+    bottom: 240px;
+    border-radius: 10px;
+    background: #5bd6e2;
+    box-shadow: -15px 26px 48px 0px rgba(85, 240, 255, 0.17);
+    z-index: 2;
+}
+
+.about__media-intro-year {
+    color: #fff;
+    font-family: Sora;
+    font-size: 4.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1; /* 100% */
+}
+
+.about__media-intro-desc {
+    color: #c6f4f9;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.42857; /* 142.857% */
+}
+
+.about__media-intro::after {
+    content: "";
+    position: absolute;
+    background: url(../img/about-union.svg) no-repeat;
+    width: 100%;
+    height: 100%;
+    top: -40px;
+    right: -84px;
 }
